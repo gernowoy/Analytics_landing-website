@@ -2,6 +2,7 @@ $color-white: #FFF;
 $color-primary: #EF2A82;
 $color-background: #F8F9FF;
 $color-body: #e3e7ff;
+$color-line: #465B95;
 $color-text-main: #172755;
 $color-text-secondary: #8794BA;
 
@@ -16,6 +17,36 @@ $color-text-secondary: #8794BA;
   box-sizing: inherit;
 }
 
+a:link,
+a:visited {
+  font-size: 1.6rem;
+  color: $color-text-secondary;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+a:hover {
+  transform: translateY(-2px);
+  color: $color-white;
+}
+
+button {
+  padding: 1rem 5.3rem;
+  border-radius: 6.8rem ;
+  background-color: transparent;
+  border: 1px solid $color-line;
+  font-size: 1.6rem;
+  color: $color-text-secondary;
+  transition: all .2s;
+}
+
+button:hover {
+  color: $color-text-main;
+  background-color: $color-white;
+  border: 1px solid $color-white;
+  cursor: pointer;
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px, 10px / 16px = 62.5%
@@ -23,7 +54,7 @@ html {
 
 body {
   min-height: 100vh;
-  color: $color-white;
+  color: $color-text-secondary;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.5;

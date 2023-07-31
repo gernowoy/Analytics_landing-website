@@ -1,0 +1,19 @@
+.container {
+  max-width: 160rem;
+  margin: 0 auto;
+  background-color: $color-background;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, .2);
+}
+
+.bg-wrapper {
+  min-height: 81.5rem;
+  background-image: url('/img/background-top.png');
+  background-position: bottom;
+  background-size: cover;
+  padding: 5rem 21rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}

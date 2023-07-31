@@ -1,0 +1,44 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &__img {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1.2rem;
+  }
+
+  &__text {
+    color: $color-white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.nav {
+  &__list {
+    margin-left: 5vw;
+    display: flex;
+    list-style: none;
+  }
+
+  &__link:link,
+  &__link:visited {
+    display: block;
+    padding: 1.8rem;
+  }
+
+
+}
+
+.auth-box {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 3rem;
+}
