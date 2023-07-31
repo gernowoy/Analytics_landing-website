@@ -1,3 +1,52 @@
+a:link,
+a:visited {
+  font-size: 1.6rem;
+  color: $color-text-secondary;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+a:hover {
+  transform: translateY(-2px);
+  color: $color-white;
+}
+
+.btn {
+  padding: 1rem 5.3rem;
+  border-radius: 6.8rem;
+  background-color: transparent;
+  border: 1px solid $color-line;
+  font-size: 1.6rem;
+  color: $color-text-secondary;
+  transition: all .2s;
+}
+
+.btn:hover {
+  color: $color-text-main;
+  background-color: $color-white;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn--colored {
+  color: $color-white;
+  border: 1px solid $color-primary;
+  background-color: $color-primary;
+}
+
+.heading-1 {
+  color: $color-white;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.mb-sm { margin-bottom: 2rem; }
+.mb-md { margin-bottom: 3rem; }
+.mb-lg { margin-bottom: 4rem; }
+.mb-hg { margin-bottom: 8rem; }
+
+//-----------------HEADER------------//
 .logo {
   display: flex;
   align-items: center;
@@ -31,8 +80,6 @@
     display: block;
     padding: 1.8rem;
   }
-
-
 }
 
 .auth-box {
@@ -42,3 +89,66 @@
   align-items: center;
   gap: 3rem;
 }
+
+//------------INTRO-------------//
+
+
+.intro {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &__box-left {
+    width: 50%;
+    padding-right: 5%;
+    // flex: 0 1 50%;
+  }
+  &__box-right {
+    // flex: 0 1 50%;
+    width: 50%;
+    position: relative;;
+  }
+
+  &__img-big {
+    display: block;
+    max-width: 80rem;
+    margin-left: 7rem;
+    border-radius: 3rem;
+    box-shadow: 0 2rem 4rem rgba(0,0,0, .3);
+  }
+  &__img-small {
+    display: block;
+    position: absolute;
+    top: 13rem;
+    left: 0;
+    // transform: translateY(-46rem);
+    border-radius: 3rem;
+    box-shadow: 0 2rem 4rem rgba(0,0,0, .3);
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//------------MAIN-------------//
+//------------PRICING-------------//
+//------------FOOTER-------------//

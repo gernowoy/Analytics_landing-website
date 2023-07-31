@@ -9,36 +9,6 @@
   box-sizing: inherit;
 }
 
-a:link,
-a:visited {
-  font-size: 1.6rem;
-  color: #8794BA;
-  text-decoration: none;
-  transition: all 0.2s;
-}
-
-a:hover {
-  transform: translateY(-2px);
-  color: #FFF;
-}
-
-button {
-  padding: 1rem 5.3rem;
-  border-radius: 6.8rem;
-  background-color: transparent;
-  border: 1px solid #465B95;
-  font-size: 1.6rem;
-  color: #8794BA;
-  transition: all 0.2s;
-}
-
-button:hover {
-  color: #172755;
-  background-color: #FFF;
-  border: 1px solid #FFF;
-  cursor: pointer;
-}
-
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -59,19 +29,80 @@ body {
   margin: 0 auto;
   background-color: #F8F9FF;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .bg-wrapper {
   min-height: 81.5rem;
+  width: 100%;
   background-image: url("/img/background-top.png");
   background-position: bottom;
   background-size: cover;
-  padding: 5rem 21rem;
+  padding: 5rem min(12.5%, 21rem);
 }
 
 .header {
   display: flex;
   align-items: center;
+}
+
+a:link,
+a:visited {
+  font-size: 1.6rem;
+  color: #8794BA;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+a:hover {
+  transform: translateY(-2px);
+  color: #FFF;
+}
+
+.btn {
+  padding: 1rem 5.3rem;
+  border-radius: 6.8rem;
+  background-color: transparent;
+  border: 1px solid #465B95;
+  font-size: 1.6rem;
+  color: #8794BA;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  color: #172755;
+  background-color: #FFF;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn--colored {
+  color: #FFF;
+  border: 1px solid #EF2A82;
+  background-color: #EF2A82;
+}
+
+.heading-1 {
+  color: #FFF;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.mb-md {
+  margin-bottom: 3rem;
+}
+
+.mb-lg {
+  margin-bottom: 4rem;
+}
+
+.mb-hg {
+  margin-bottom: 8rem;
 }
 
 .logo {
@@ -109,4 +140,33 @@ body {
   justify-content: end;
   align-items: center;
   gap: 3rem;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.intro__box-left {
+  width: 50%;
+  padding-right: 5%;
+}
+.intro__box-right {
+  width: 50%;
+  position: relative;
+}
+.intro__img-big {
+  display: block;
+  max-width: 80rem;
+  margin-left: 7rem;
+  border-radius: 3rem;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+}
+.intro__img-small {
+  display: block;
+  position: absolute;
+  top: 13rem;
+  left: 0;
+  border-radius: 3rem;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
 }/*# sourceMappingURL=styles.css.map */

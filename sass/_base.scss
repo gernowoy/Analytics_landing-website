@@ -6,6 +6,7 @@ $color-line: #465B95;
 $color-text-main: #172755;
 $color-text-secondary: #8794BA;
 
+
 * {
   margin: 0;
   padding: 0;
@@ -15,36 +16,6 @@ $color-text-secondary: #8794BA;
 *::after,
 *::before {
   box-sizing: inherit;
-}
-
-a:link,
-a:visited {
-  font-size: 1.6rem;
-  color: $color-text-secondary;
-  text-decoration: none;
-  transition: all .2s;
-}
-
-a:hover {
-  transform: translateY(-2px);
-  color: $color-white;
-}
-
-button {
-  padding: 1rem 5.3rem;
-  border-radius: 6.8rem ;
-  background-color: transparent;
-  border: 1px solid $color-line;
-  font-size: 1.6rem;
-  color: $color-text-secondary;
-  transition: all .2s;
-}
-
-button:hover {
-  color: $color-text-main;
-  background-color: $color-white;
-  border: 1px solid $color-white;
-  cursor: pointer;
 }
 
 html {
