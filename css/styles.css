@@ -32,7 +32,7 @@ body {
   overflow: hidden;
 }
 
-.bg-wrapper {
+.header-wrapper {
   min-height: 81.5rem;
   width: 100%;
   background-image: url("/img/background-top.png");
@@ -44,6 +44,10 @@ body {
 .header {
   display: flex;
   align-items: center;
+}
+
+.main-wrapper {
+  padding: 5rem min(12.5%, 21rem);
 }
 
 a:link,
@@ -89,6 +93,23 @@ a:hover {
   line-height: 1.2;
 }
 
+.heading-2 {
+  color: #172755;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.heading-3 {
+  color: #172755;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.heading--light {
+  color: #FFF;
+}
+
 .mb-sm {
   margin-bottom: 2rem;
 }
@@ -103,6 +124,10 @@ a:hover {
 
 .mb-hg {
   margin-bottom: 8rem;
+}
+
+.mb-xhg {
+  margin-bottom: 12rem;
 }
 
 .logo {
@@ -169,4 +194,45 @@ a:hover {
   left: 0;
   border-radius: 3rem;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+}
+
+.main__features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__features p {
+  max-width: 106rem;
+  text-align: center;
+}
+.main__features-box {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
+  justify-items: center;
+  gap: 2rem;
+}
+.main__features-box img {
+  filter: invert(35%) sepia(79%) saturate(6157%) hue-rotate(318deg) brightness(99%) contrast(89%);
+}
+.main__charts {
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+}
+.main__charts-box {
+  display: flex;
+  gap: 10rem;
+}
+.main__charts-box--left {
+  flex-basis: 45%;
+}
+.main__charts-box--right {
+  flex-basis: 55%;
+}
+.main__charts-box--right img {
+  width: 100%;
+}
+
+.flex-reverse-order {
+  order: 2;
 }/*# sourceMappingURL=styles.css.map */

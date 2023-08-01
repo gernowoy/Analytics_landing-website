@@ -6,7 +6,7 @@
   overflow: hidden;
 }
 
-.bg-wrapper {
+.header-wrapper {
   min-height: 81.5rem;
   width: 100%;
   background-image: url('/img/background-top.png');
@@ -19,3 +19,8 @@
   display: flex;
   align-items: center;
 }
+
+.main-wrapper {
+  padding: 5rem min(12.5%, 21rem);
+}
+
