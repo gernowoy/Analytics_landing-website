@@ -50,6 +50,14 @@ body {
   padding: 5rem min(12.5%, 21rem);
 }
 
+.footer-wrapper {
+  width: 100%;
+  background-image: url("/img/background-bottom.png");
+  background-position: top;
+  background-size: cover;
+  padding: 5rem min(12.5%, 21rem);
+}
+
 a:link,
 a:visited {
   font-size: 1.6rem;
@@ -85,6 +93,9 @@ a:hover {
   border: 1px solid #EF2A82;
   background-color: #EF2A82;
 }
+.btn--colored:hover {
+  border: 1px solid #0F1F4B;
+}
 
 .heading-1 {
   color: #FFF;
@@ -100,7 +111,7 @@ a:hover {
   line-height: 1;
 }
 
-.heading-3 {
+.heading-4 {
   color: #172755;
   font-size: 1.6rem;
   font-weight: 700;
@@ -108,6 +119,10 @@ a:hover {
 
 .heading--light {
   color: #FFF;
+}
+
+.mt-xhg {
+  margin-top: 27rem;
 }
 
 .mb-sm {
@@ -137,7 +152,6 @@ a:hover {
   cursor: pointer;
 }
 .logo__img {
-  display: inline-block;
   width: 4rem;
   height: 4rem;
   margin-right: 1.2rem;
@@ -235,4 +249,89 @@ a:hover {
 
 .flex-reverse-order {
   order: 2;
+}
+
+.pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pricing__cards {
+  display: flex;
+  gap: min(8rem, 5vw);
+  justify-content: center;
+  align-items: center;
+}
+.pricing__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 34rem;
+  padding: 5rem 6rem 7rem;
+  border-radius: 3rem;
+  background-color: #0F1F4B;
+}
+.pricing__card--active {
+  background-color: #FFF;
+}
+.pricing__card--active .pricing__title {
+  color: #172755;
+}
+.pricing__card--active .pricing__price {
+  color: #172755;
+}
+.pricing__title {
+  color: #FFF;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.pricing__line {
+  width: 100%;
+  border-top: 1px solid #465B95;
+}
+.pricing__price {
+  color: #FFF;
+  font-size: 6rem;
+  font-weight: 700;
+}
+.pricing__price small {
+  font-size: 3rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+.footer-logo__img {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1.2rem;
+}
+.footer-logo__text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.footer .footer-nav__list {
+  display: flex;
+  list-style: none;
+}
+.footer .footer-nav__link:link, .footer .footer-nav__link:visited {
+  display: block;
+  padding: 1.8rem;
+}
+.footer .footer-socials {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 3rem;
+}
+.footer .footer-socials img:hover {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(0%) hue-rotate(93deg) brightness(110%) contrast(100%);
 }/*# sourceMappingURL=styles.css.map */

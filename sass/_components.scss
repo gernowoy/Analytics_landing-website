@@ -32,6 +32,9 @@ a:hover {
   color: $color-white;
   border: 1px solid $color-primary;
   background-color: $color-primary;
+  &:hover {
+    border: 1px solid $color-card-dark;
+  }
 }
 
 .heading-1 {
@@ -48,7 +51,7 @@ a:hover {
   line-height: 1;
 }
 
-.heading-3 {
+.heading-4 {
   color: $color-text-main;
   font-size: 1.6rem;
   font-weight: 700;
@@ -58,6 +61,7 @@ a:hover {
   color: $color-white;
 }
 
+.mt-xhg { margin-top: 27rem; }
 .mb-sm { margin-bottom: 2rem; }
 .mb-md { margin-bottom: 3rem; }
 .mb-lg { margin-bottom: 4rem; }
@@ -72,7 +76,6 @@ a:hover {
   cursor: pointer;
 
   &__img {
-    display: inline-block;
     width: 4rem;
     height: 4rem;
     margin-right: 1.2rem;
@@ -196,21 +199,111 @@ a:hover {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//------------MAIN-------------//
 //------------PRICING-------------//
+
+.pricing {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  &__cards {
+    display: flex;
+    gap: min(8rem, 5vw) ;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 34rem;
+    padding: 5rem 6rem 7rem;
+    border-radius: 3rem;
+    background-color: $color-card-dark;
+  }
+
+  &__card--active {
+    background-color: $color-white;
+    .pricing__title {
+      color: $color-text-main;
+  }
+  .pricing__price {
+    color: $color-text-main;
+  }
+
+}
+
+  &__title {
+    color: $color-white;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__line {
+    width: 100%;
+    border-top: 1px solid $color-line;
+  }
+
+  &__price {
+    color: $color-white;
+    font-size: 6rem;
+    font-weight: 700;
+
+    small {
+      font-size: 3rem;
+    }
+  }
+
+
+} 
 //------------FOOTER-------------//
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-logo {
+    display: flex;
+    align-items: center;
+
+    &__img {
+      width: 4rem;
+      height: 4rem;
+      margin-right: 1.2rem;
+    }
+
+    &__text {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  .footer-nav {
+    &__list {
+      display: flex;
+      list-style: none;
+    }
+  
+    &__link:link,
+    &__link:visited {
+      display: block;
+      padding: 1.8rem;
+    }
+  }
+  
+  .footer-socials {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 3rem;
+
+    img:hover {
+      filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(0%) hue-rotate(93deg) brightness(110%) contrast(100%);
+    }
+  }
+}
