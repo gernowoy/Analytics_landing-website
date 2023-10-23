@@ -270,6 +270,10 @@ a:hover {
   padding: 5rem 6rem 7rem;
   border-radius: 3rem;
   background-color: #0F1F4B;
+  transition: all 0.2s;
+}
+.pricing__card:hover {
+  transform: translateY(-6px);
 }
 .pricing__card--active {
   background-color: #FFF;
