@@ -1,14 +1,20 @@
-a:link,
-a:visited {
-  font-size: 1.6rem;
-  color: $color-text-secondary;
-  text-decoration: none;
-  transition: all .2s;
-}
+a {
+  &:link,
+  &:visited {
+    font-size: 1.6rem;
+    color: $color-text-secondary;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
 
-a:hover {
-  transform: translateY(-2px);
-  color: $color-white;
+  &:hover {
+    transform: translateY(-2px);
+    color: $color-white;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
 }
 
 .btn {
@@ -18,7 +24,7 @@ a:hover {
   border: 1px solid $color-line;
   font-size: 1.6rem;
   color: $color-text-secondary;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .btn:hover {
@@ -61,12 +67,24 @@ a:hover {
   color: $color-white;
 }
 
-.mt-xhg { margin-top: 27rem; }
-.mb-sm { margin-bottom: 2rem; }
-.mb-md { margin-bottom: 3rem; }
-.mb-lg { margin-bottom: 4rem; }
-.mb-hg { margin-bottom: 8rem; }
-.mb-xhg { margin-bottom: 12rem; }
+.mt-xhg {
+  margin-top: 27rem;
+}
+.mb-sm {
+  margin-bottom: 2rem;
+}
+.mb-md {
+  margin-bottom: 3rem;
+}
+.mb-lg {
+  margin-bottom: 4rem;
+}
+.mb-hg {
+  margin-bottom: 8rem;
+}
+.mb-xhg {
+  margin-bottom: 12rem;
+}
 
 //-----------------HEADER------------//
 .logo {
@@ -124,7 +142,7 @@ a:hover {
   }
   &__box-right {
     width: 50%;
-    position: relative;;
+    position: relative;
   }
 
   &__img-big {
@@ -132,7 +150,7 @@ a:hover {
     max-width: 80rem;
     margin-left: 7rem;
     border-radius: 3rem;
-    box-shadow: 0 2rem 4rem rgba(0,0,0, .3);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
   }
   &__img-small {
     display: block;
@@ -141,7 +159,7 @@ a:hover {
     left: 0;
     // transform: translateY(-46rem);
     border-radius: 3rem;
-    box-shadow: 0 2rem 4rem rgba(0,0,0, .3);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -155,7 +173,7 @@ a:hover {
   }
 
   &__features p {
-    max-width: 106rem;
+    max-width: 100rem;
     text-align: center;
   }
 
@@ -166,7 +184,8 @@ a:hover {
     gap: 2rem;
 
     & img {
-      filter: invert(35%) sepia(79%) saturate(6157%) hue-rotate(318deg) brightness(99%) contrast(89%);
+      filter: invert(35%) sepia(79%) saturate(6157%) hue-rotate(318deg)
+        brightness(99%) contrast(89%);
     }
   }
 
@@ -198,18 +217,16 @@ a:hover {
   order: 2;
 }
 
-
 //------------PRICING-------------//
 
 .pricing {
-  
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   &__cards {
     display: flex;
-    gap: min(8rem, 5vw) ;
+    gap: min(8rem, 5vw);
     justify-content: center;
     align-items: center;
   }
@@ -222,7 +239,7 @@ a:hover {
     padding: 5rem 6rem 7rem;
     border-radius: 3rem;
     background-color: $color-card-dark;
-    transition: all .2s;
+    transition: all 0.2s;
 
     &:hover {
       transform: translateY(-6px);
@@ -233,12 +250,11 @@ a:hover {
     background-color: $color-white;
     .pricing__title {
       color: $color-text-main;
+    }
+    .pricing__price {
+      color: $color-text-main;
+    }
   }
-  .pricing__price {
-    color: $color-text-main;
-  }
-
-}
 
   &__title {
     color: $color-white;
@@ -261,9 +277,7 @@ a:hover {
       font-size: 3rem;
     }
   }
-
-
-} 
+}
 //------------FOOTER-------------//
 
 .footer {
@@ -293,14 +307,14 @@ a:hover {
       display: flex;
       list-style: none;
     }
-  
+
     &__link:link,
     &__link:visited {
       display: block;
       padding: 1.8rem;
     }
   }
-  
+
   .footer-socials {
     display: flex;
     justify-content: end;
@@ -308,7 +322,8 @@ a:hover {
     gap: 3rem;
 
     img:hover {
-      filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(0%) hue-rotate(93deg) brightness(110%) contrast(100%);
+      filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(0%)
+        hue-rotate(93deg) brightness(110%) contrast(100%);
     }
   }
 }

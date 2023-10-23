@@ -12,6 +12,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -58,17 +59,18 @@ body {
   padding: 5rem min(12.5%, 21rem);
 }
 
-a:link,
-a:visited {
+a:link, a:visited {
   font-size: 1.6rem;
   color: #8794BA;
   text-decoration: none;
   transition: all 0.2s;
 }
-
 a:hover {
   transform: translateY(-2px);
   color: #FFF;
+}
+a:active {
+  transform: translateY(0);
 }
 
 .btn {
@@ -216,7 +218,7 @@ a:hover {
   align-items: center;
 }
 .main__features p {
-  max-width: 106rem;
+  max-width: 100rem;
   text-align: center;
 }
 .main__features-box {
