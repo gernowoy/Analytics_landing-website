@@ -2,33 +2,51 @@
   max-width: 160rem;
   margin: 0 auto;
   background-color: $color-background;
-  box-shadow: 0 0 2rem rgba(0, 0, 0, .2);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
 .header-wrapper {
   min-height: 81.5rem;
   width: 100%;
-  background-image: url('/img/background-top.png');
+  background-image: url("/img/background-top.png");
   background-position: bottom;
   background-size: cover;
-  padding: 5rem min(12.5%, 21rem);
+  background-repeat: no-repeat;
+  padding: 5rem 12.5%;
+
+  @media screen and (max-width: 75em) {
+    padding: 5rem 7% 0;
+    background-position: 0 -22rem;
+  }
 }
 
 .header {
   display: flex;
   align-items: center;
+  @media screen and (max-width: 75em) {
+    justify-content: space-between;
+  }
+  
 }
 
 .main-wrapper {
-  padding: 5rem min(12.5%, 21rem);
+  padding: 5rem 12.5%;
+  @media screen and (max-width: 75em) {
+    padding: 5rem 7%;
+    margin-top: -25rem;
+  }
 }
 
 .footer-wrapper {
-  // min-height: 121rem;
   width: 100%;
-  background-image: url('/img/background-bottom.png');
+  background-image: url("/img/background-bottom.png");
   background-position: top;
   background-size: cover;
-  padding: 5rem min(12.5%, 21rem);
+  background-repeat: no-repeat;
+  padding: 5rem 12.5%;
+  @media screen and (max-width: 75em) {
+    padding: 5rem 7%;
+    margin-top: -20rem;
+  }
 }

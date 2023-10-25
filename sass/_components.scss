@@ -48,6 +48,9 @@ a {
   font-size: 5rem;
   font-weight: 700;
   line-height: 1.2;
+  @media screen and (max-width: 75em) {
+    font-size: 4rem;
+  }
 }
 
 .heading-2 {
@@ -55,6 +58,9 @@ a {
   font-size: 4rem;
   font-weight: 700;
   line-height: 1;
+  @media screen and (max-width: 75em) {
+    font-size: 3.5rem;
+  }
 }
 
 .heading-4 {
@@ -109,7 +115,7 @@ a {
 
 .nav {
   &__list {
-    margin-left: 5vw;
+    margin-left: 3vw;
     display: flex;
     list-style: none;
   }
@@ -119,6 +125,10 @@ a {
     display: block;
     padding: 1.8rem;
   }
+
+  @media screen and (max-width: 75em) {
+    display: none;
+  }
 }
 
 .auth-box {
@@ -127,7 +137,125 @@ a {
   justify-content: end;
   align-items: center;
   gap: 3rem;
+
+  @media screen and (max-width: 75em) {
+    display: none;
+  }
 }
+
+.menu-bar {
+  display: none;
+  width: 6.5rem;
+  padding: 1rem;
+  cursor: pointer;
+
+  @media screen and (max-width: 75em) {
+    display: block;
+  }
+}
+
+.line {
+  height: 5px;
+  line-height: 1.8;
+  width: 100%;
+  background-color: $color-primary;
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+
+  &:not(:last-child) {
+    margin-bottom: 0.4rem;
+  }
+
+  &--first {
+    transform: translateY(-4px);
+  }
+  &--third {
+    transform: translateY(4px);
+  }
+}
+
+.menu-dropdown {
+  // display: none;
+  visibility: hidden;
+  height: 0;
+  min-width: 20rem;
+  position: absolute;
+  top: 10rem;
+  right: 12rem;
+  background-color: $color-dropdown;
+  border-radius: 1.2rem;
+  list-style: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &__item {
+    width: 100%;
+    &:hover {
+      background-color: $color-card-dark;
+      cursor: pointer;
+      & a {
+        transform: initial;
+      }
+    }
+  }
+
+  &__item:first-child {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+  &__item:last-child {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    a {
+      font-size: 2rem;
+    }
+  }
+  &__item:nth-last-child(-n + 2) a {
+    font-size: 2rem;
+  }
+
+  & a {
+    display: block;
+    padding: 1rem 0;
+    width: 100%;
+    line-height: 1.5;
+    text-align: center;
+    color: $color-white;
+    transition: initial;
+  }
+}
+
+.menu-dropdown.open {
+  // display: block;
+  visibility: visible;
+  height: 27.6rem;
+
+
+  @media screen and (max-width: 40em) {
+    right: 4rem;
+    left: 4rem;
+  }
+  @media screen and (max-width: 30em) {
+    right: 0;
+    left: 0;
+  }
+}
+
+.menu-bar.open {
+  & .line--first {
+    transform: translateY(9px) rotateZ(-45deg);
+  }
+  & .line--second {
+    opacity: 0;
+  }
+  & .line--third {
+    transform: translateY(-9px) rotateZ(45deg);
+  }
+}
+
+
 
 //------------INTRO-------------//
 
@@ -137,11 +265,11 @@ a {
   width: 100%;
 
   &__box-left {
-    width: 50%;
+    min-width: 60%;
     padding-right: 5%;
   }
   &__box-right {
-    width: 50%;
+    min-width: 40%;
     position: relative;
   }
 
@@ -151,15 +279,22 @@ a {
     margin-left: 7rem;
     border-radius: 3rem;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+    @media screen and (max-width: 75em) {
+      max-width: 50rem;
+      margin-left: 7rem;
+    }
   }
   &__img-small {
     display: block;
     position: absolute;
     top: 13rem;
     left: 0;
-    // transform: translateY(-46rem);
     border-radius: 3rem;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+    @media screen and (max-width: 75em) {
+      max-width: 30rem;
+      top: 8rem;
+    }
   }
 }
 
@@ -208,6 +343,8 @@ a {
 
       & img {
         width: 100%;
+        border-radius: 2rem;
+        box-shadow: 6px 6px 14px $color-shadow;
       }
     }
   }
@@ -224,11 +361,19 @@ a {
   flex-direction: column;
   align-items: center;
 
+  &__text {
+    text-align: center;
+  }
+
   &__cards {
     display: flex;
-    gap: min(8rem, 5vw);
+    gap: 5vw;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 75em) {
+      flex-direction: column;
+      gap: 4rem;
+    }
   }
 
   &__card {
