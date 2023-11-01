@@ -9,7 +9,7 @@
 .header-wrapper {
   min-height: 81.5rem;
   width: 100%;
-  background-image: url("/img/background-top.png");
+  background-image: url("../img/background-top.png");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,6 +19,16 @@
     padding: 5rem 7% 0;
     background-position: 0 -22rem;
   }
+  @media screen and (max-width: 60em) {
+    min-height: 115rem;
+  }
+  @media screen and (max-width: 40em) {
+    padding: 2rem 5% 0;
+    min-height: 99rem;
+  }
+  @media screen and (max-width: 30em) {
+    min-height: 89rem;
+  }
 }
 
 .header {
@@ -27,7 +37,6 @@
   @media screen and (max-width: 75em) {
     justify-content: space-between;
   }
-  
 }
 
 .main-wrapper {
@@ -36,11 +45,14 @@
     padding: 5rem 7%;
     margin-top: -25rem;
   }
+  @media screen and (max-width: 40em) {
+    padding: 2rem 5%;
+  }
 }
 
 .footer-wrapper {
   width: 100%;
-  background-image: url("/img/background-bottom.png");
+  background-image: url("../img/background-bottom.png");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -48,5 +60,8 @@
   @media screen and (max-width: 75em) {
     padding: 5rem 7%;
     margin-top: -20rem;
+  }
+  @media screen and (max-width: 40em) {
+    padding: 2rem 5%;
   }
 }
